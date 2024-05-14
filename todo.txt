@@ -1,1 +1,2 @@
 1. create an action.ts and fetch the data from the url
+modify action to return more than the first element from the api

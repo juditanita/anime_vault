@@ -4,7 +4,8 @@ import { data } from "./_data";
 import { fetchAnimate } from "./action";
 
 async function Home() {
-  await fetchAnimate();
+  //add an argument as page=1
+  await fetchAnimate(1);
 
   return (
     <main className="sm:p-16 py-16 px-8 flex flex-col gap-10">
