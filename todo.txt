@@ -1,0 +1,1 @@
+1. create an action.ts and fetch the data from the url
