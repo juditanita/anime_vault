@@ -9,3 +9,5 @@
     }
   }, [inView]);
   6.get more data from the fetch function and set the data as an  AnimeProp from the anime card
+  7. add the section from the page.tsx to the loadMore 
+  8. as it is loading more and more it's loading the same data. to fix that we need to keep track of the page and increment it.
