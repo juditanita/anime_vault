@@ -1,10 +1,11 @@
 1. create an action.ts and fetch the data from the url
-modify action to return more than the first element from the api
-image error since the image is comming from the url needs to be fixed.
-load more images when the user reaches the loading "button" for that we use react intersection package and useInview
-one the page is load depending on the view notify me so that i can send moreconst { ref, inView } = useInView();
+2.modify action to return more than the first element from the api
+3.image error since the image is comming from the url needs to be fixed.
+4.load more images when the user reaches the loading "button" for that we use react intersection package and useInview
+5.one the page is load depending on the view notify me so that i can send moreconst { ref, inView } = useInView();
   useEffect(() => {
     if (inView) {
       alert("load More");
     }
   }, [inView]);
+  6.get more data from the fetch function and set the data as an  AnimeProp from the anime card
