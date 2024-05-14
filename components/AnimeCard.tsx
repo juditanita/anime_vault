@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { easeInOut, motion } from "framer-motion";
+import { MotionDiv } from "./MotionDiv";
 
 export interface AnimeProp {
   id: string;
@@ -25,14 +26,14 @@ const varianst = {
   },
 };
 
-function AnimeCard({ anime }: Prop) {
+function AnimeCard({ anime, index }: Prop) {
   return (
-    <motion.div
+    <MotionDiv
       className="max-w-sm rounded relative w-full"
       variants={varianst}
       initial="hidden"
       animate="visible"
-      transition={{ delay: 1, ease: easeInOut, duration: 0.5 }}
+      transition={{ delay: index * 0.25, ease: "easeInOut", duration: 0.5 }}
       viewport={{ amount: 0 }}
     >
       <div className="relative w-full h-[37vh]">
@@ -79,7 +80,7 @@ function AnimeCard({ anime }: Prop) {
           </div>
         </div>
       </div>
-    </motion.div>
+    </MotionDiv>
   );
 }
 

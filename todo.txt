@@ -11,3 +11,6 @@
   6.get more data from the fetch function and set the data as an  AnimeProp from the anime card
   7. add the section from the page.tsx to the loadMore 
   8. as it is loading more and more it's loading the same data. to fix that we need to keep track of the page and increment it.
+  9. add animation with framer
+  10.since there is an error cos it is a server side we are going to create a new motion div in the componet and import it for the card
+  11. make the animation happen not in the same time with using the index and mulitply it.
