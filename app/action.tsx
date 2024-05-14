@@ -1,5 +1,7 @@
 "use server";
 
+import AnimeCard, { AnimeProp } from "@/components/AnimeCard";
+
 //make the call and return the data use this inside the page.tsx
 export const fetchAnimate = async (page: number) => {
   const response = await fetch(
@@ -7,7 +9,8 @@ export const fetchAnimate = async (page: number) => {
   );
 
   const data = await response.json();
-  console.log(data.length);
 
-  return data;
+  return data.map((item: AnimeProp, index: number) => (
+    <AnimeCard key={item.id} anime={item} index={index} />
+  ));
 };

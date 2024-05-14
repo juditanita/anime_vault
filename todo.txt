@@ -14,3 +14,4 @@
   9. add animation with framer
   10.since there is an error cos it is a server side we are going to create a new motion div in the componet and import it for the card
   11. make the animation happen not in the same time with using the index and mulitply it.
+  12 fix the action inside the action.ts and change its extention to tsx by returning the data map from the page.tsx
