@@ -15,7 +15,7 @@ function LoadMore() {
   useEffect(() => {
     if (inView) {
       // alert("load More");
-      fetchAnimate(2).then((res) => {
+      fetchAnimate(page).then((res) => {
         setData([...data, ...res]);
         page++;
       });

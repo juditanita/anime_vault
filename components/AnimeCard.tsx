@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { easeInOut, motion } from "framer-motion";
 
 export interface AnimeProp {
   id: string;
@@ -17,9 +18,23 @@ interface Prop {
   index: number;
 }
 
+const varianst = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+  },
+};
+
 function AnimeCard({ anime }: Prop) {
   return (
-    <div className="max-w-sm rounded relative w-full">
+    <motion.div
+      className="max-w-sm rounded relative w-full"
+      variants={varianst}
+      initial="hidden"
+      animate="visible"
+      transition={{ delay: 1, ease: easeInOut, duration: 0.5 }}
+      viewport={{ amount: 0 }}
+    >
       <div className="relative w-full h-[37vh]">
         <Image
           src={`https://shikimori.one${anime.image.original}`}
@@ -64,7 +79,7 @@ function AnimeCard({ anime }: Prop) {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
